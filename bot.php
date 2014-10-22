@@ -1,7 +1,4 @@
 <?php
-/*
- Twitter bot
-*/<?php
-/*
- Twitter bot
-*/
+/**
+ * Twitter bot
+ */
