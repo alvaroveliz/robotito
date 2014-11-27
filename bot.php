@@ -47,7 +47,7 @@ while ($m < count($mentions)) {
     );
 
     if (is_object($uploaded_image)) {
-        $tweet_params['media_ids'] = $uploaded_image->media_id;
+        $tweet_params['media_ids'] = "$uploaded_image->media_id_string";
     }
 
     $twitter->post($statuses_url, $tweet_params);
