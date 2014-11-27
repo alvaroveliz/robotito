@@ -8,7 +8,7 @@ function what_is_my_husbando($screen_name)
     // Detect if this user already have a husbnado for today
     $husbandos = array(
         array(
-        'name' => 'Akihiko Sanada'
+        'name' => 'Akihiko Sanada',
         'picture' => 'akihiko_sanada.jpg'
         ),
         array(
