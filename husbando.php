@@ -8,8 +8,16 @@ function what_is_my_husbando($screen_name)
     // Detect if this user already have a husbnado for today
     $husbandos = array(
         array(
-            'name' => 'Killua Zoldyck',
-            'picture' => 'http://media-cache-ak0.pinimg.com/236x/4a/de/0b/4ade0b88ea69ee5b507ce1a904fd42a4.jpg'
+        'name' => 'husbando 1'
+        'picture' => 'akihiko_sanada.jpg'
+        ),
+        array(
+        'name' => 'husbando 2',
+        'picture' => 'makoto_tachinaba.jpg'
+        ),
+        array(
+        'name' => 'husbando 3',
+        'picture' => 'rukawa_kaede.jpg'
         ),
     );
 
