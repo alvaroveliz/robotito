@@ -33,7 +33,6 @@ while ($m < count($mentions)) {
         'status' => $status,
         'in_reply_to_status_id' => $mentions[$m]->id
     );
-    //$twitter->post($statuses_url, $tweet_params);
 
     $m++;
     exit;
