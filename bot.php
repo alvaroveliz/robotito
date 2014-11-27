@@ -27,7 +27,7 @@ while ($m < count($mentions)) {
     $user_to_reply = $mentions[$m]->user->screen_name;
     $husbando = what_is_my_husbando($user_to_reply);
 
-    $status = '@'.$user_to_reply.' your husbando is '.$husbando['name'].' : '.$husbando['picture'];
+   $status = '@'.$user_to_reply.' Your husbando is '.$husbando['name'];
 
     $tweet_params = array(
         'status' => $status,
