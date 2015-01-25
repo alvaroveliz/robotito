@@ -60,9 +60,11 @@ if (array_key_exists('errors', $mentions)) {
             }
 
             $twitter->post($statuses_url, $tweet_params);
-
-            $m++;
+        } else {
+            echo "Husbando already sent to ".$user_to_reply."\r\n";
         }
+
+        $m++;
     }
 }
 echo '</pre>';
