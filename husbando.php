@@ -44,12 +44,20 @@ function what_is_my_husbando($screen_name)
                 'picture' => 'ittoki_otoya.png'
             ),
             array(
+                'name'    => 'Kou Mabuchi',
+                'picture' => 'kou_mabuchi.jpg'
+            ),
+            array(
                 'name'    => 'Kurapika',
                 'picture' => 'kurapika.jpg'
             ),
             array(
                 'name'    => 'Makoto Tachinaba',
                 'picture' => 'makoto_tachinaba.jpg'
+            ),
+            array(
+                'name'    => 'Mamoru Chiba',
+                'picture' => 'mamoru_chiba.png'
             ),
             array(
                 'name'    => 'Rukawa Kaede',
