@@ -12,7 +12,7 @@ function what_is_my_husbando($screen_name)
     $result = $dbh->query($sql, PDO::FETCH_ASSOC);
     $rows = $result->fetchAll();
 
-    if ($rows[0]['count'] == 0) {
+    if ($rows[0]['count'] <= 1) {
 
         $husbandos = array(
             array(
@@ -70,22 +70,22 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Sanosuke Sagara',
                 'picture' => 'sanosuke_sagara.jpg'
-                
+
              ),
              array(
                 'name'    => 'Shinji Ikari',
                 'picture' => 'shinji_ikari.jpg'
-                
+
              ),
              array(
                 'name'    => 'Spike Spiegel',
                 'picture' => 'spike_spiegel.jpg'
-                   
+
             ),
              array(
                 'name'    => 'Touya Kinomoto',
                 'picture' => 'touya_kinomoto.jpg'
-                
+
             ),
              array(
                 'name'    => 'Trunks',
