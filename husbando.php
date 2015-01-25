@@ -44,6 +44,10 @@ function what_is_my_husbando($screen_name)
                 'picture' => 'ittoki_otoya.png'
             ),
             array(
+                'name'    => 'Kurapika',
+                'picture' => 'kurapika.jpg'
+            ),
+            array(
                 'name'    => 'Makoto Tachinaba',
                 'picture' => 'makoto_tachinaba.jpg'
             ),
@@ -58,6 +62,14 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Sanosuke Sagara',
                 'picture' => 'sanosuke_sagara.jpg'
+            ),
+            array(
+                'name'    => 'Wakasa',
+                'picture' => 'Wakasa.jpg'
+            ),
+            array(
+                'name'    => 'Yosuke Hanamura',
+                'picture' => 'yosuke_hanamura.png'
             ),
         );
 
