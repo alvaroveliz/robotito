@@ -5,7 +5,8 @@
 
 function what_is_my_husbando($screen_name)
 {
-    $dbh = new PDO('sqlite:data/husbandos.sqlite');
+    $db  = __DIR__.'/data/husbandos.sqlite';
+    $dbh = new PDO('sqlite:'.$db);
 
     // Detect if this user already have a husbnado for today
     $sql = "SELECT COUNT(*) as 'count' FROM husbandos WHERE username = '".$screen_name."' AND married_at BETWEEN '".date('Y-m-d')." 00:00:00' AND '".date('Y-m-d')." 23:59:59'";
