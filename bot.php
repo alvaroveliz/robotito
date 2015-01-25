@@ -25,6 +25,7 @@ $mentions = $twitter->get($mentions_url, $mentions_params);
 // using while because foreach and for uses more memory :3
 $m = 0;
 
+echo '<pre>';
 if (array_key_exists('errors', $mentions)) {
     print_r($mentions);
 } else {
@@ -47,6 +48,8 @@ if (array_key_exists('errors', $mentions)) {
 
             $status = '@'.$user_to_reply.' Your husbando is '.$husbando['name'];
 
+            echo date('Y-m-d H:i:s') . ' -- '. $status."\r\n";
+
             $tweet_params = array(
                 'status' => $status,
                 'in_reply_to_status_id' => $mentions[$m]->id,
@@ -62,3 +65,6 @@ if (array_key_exists('errors', $mentions)) {
         }
     }
 }
+echo '</pre>';
+
+exit;
