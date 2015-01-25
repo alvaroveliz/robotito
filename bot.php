@@ -24,34 +24,41 @@ $mentions = $twitter->get($mentions_url, $mentions_params);
 
 // using while because foreach and for uses more memory :3
 $m = 0;
-while ($m < count($mentions)) {
-    $user_to_reply = $mentions[$m]->user->screen_name;
-    $husbando = what_is_my_husbando($user_to_reply);
 
-    // first we upload the photo
-    $image_path   = 'husbandos/'.$husbando['picture'];
-    $uploaded_image = '';
-    if (file_exists($image_path)) {
-        $media_base64 = base64_encode(file_get_contents($image_path));
-        $image_params = array(
-            'media' => $media_base64
-        );
-        $uploaded_image = $twitter->post($upload_url, $image_params);
+if (array_key_exists('errors', $mentions)) {
+    print_r($mentions);
+} else {
+    while ($m < (count($mentions)-1)) {
+        $user_to_reply = $mentions[$m]->user->screen_name;
+        $husbando = what_is_my_husbando($user_to_reply);
+
+        if ($husbando !== false) {
+            // first we upload the photo
+            $image_path   = 'husbandos/'.$husbando['picture'];
+
+            $uploaded_image = '';
+            if (file_exists($image_path)) {
+                $media_base64 = base64_encode(file_get_contents($image_path));
+                $image_params = array(
+                    'media' => $media_base64
+                );
+                $uploaded_image = $twitter->post($upload_url, $image_params);
+            }
+
+            $status = '@'.$user_to_reply.' Your husbando is '.$husbando['name'];
+
+            $tweet_params = array(
+                'status' => $status,
+                'in_reply_to_status_id' => $mentions[$m]->id,
+            );
+
+            if (is_object($uploaded_image)) {
+                $tweet_params['media_ids'] = "$uploaded_image->media_id_string";
+            }
+
+            $twitter->post($statuses_url, $tweet_params);
+
+            $m++;
+        }
     }
-
-    $status = '@'.$user_to_reply.' Your husbando is '.$husbando['name'];
-
-    $tweet_params = array(
-        'status' => $status,
-        'in_reply_to_status_id' => $mentions[$m]->id,
-    );
-
-    if (is_object($uploaded_image)) {
-        $tweet_params['media_ids'] = "$uploaded_image->media_id_string";
-    }
-
-    $twitter->post($statuses_url, $tweet_params);
-
-    $m++;
-    exit;
 }
