@@ -104,6 +104,7 @@ function what_is_my_husbando($screen_name)
             ),
             array(
                 'name'    => 'Sanosuke Sagara',
+<<<<<<< HEAD
                 'picture' => 'sanosuke_sagara.jpg'  
             ),
             array(
@@ -111,15 +112,25 @@ function what_is_my_husbando($screen_name)
                 'picture' => 'shinji_ikari.jpg'
                 
             ),
+=======
+                'picture' => 'sanosuke_sagara.jpg'
+
+             ),
+             array(
+                'name'    => 'Shinji Ikari',
+                'picture' => 'shinji_ikari.jpg'
+
+             ),
+>>>>>>> FETCH_HEAD
              array(
                 'name'    => 'Spike Spiegel',
                 'picture' => 'spike_spiegel.jpg'
-                   
+
             ),
              array(
                 'name'    => 'Touya Kinomoto',
                 'picture' => 'touya_kinomoto.jpg'
-                
+
             ),
              array(
                 'name'    => 'Tooru Oikawa',
