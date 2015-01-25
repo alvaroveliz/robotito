@@ -39,6 +39,7 @@ if (array_key_exists('errors', $mentions)) {
 
             $uploaded_image = '';
             if (file_exists($image_path)) {
+                echo "Uploading husbando picture : ".$image_path."\r\n";
                 $media_base64 = base64_encode(file_get_contents($image_path));
                 $image_params = array(
                     'media' => $media_base64
