@@ -25,7 +25,6 @@ $mentions = $twitter->get($mentions_url, $mentions_params);
 // using while because foreach and for uses more memory :3
 $m = 0;
 
-echo '<pre>';
 if (array_key_exists('errors', $mentions)) {
     print_r($mentions);
 } else {
@@ -68,6 +67,6 @@ if (array_key_exists('errors', $mentions)) {
         $m++;
     }
 }
-echo '</pre>';
+echo '========== Process end at '.date('d-m-Y H:i:s').'==========';
 
 exit;
