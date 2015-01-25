@@ -71,6 +71,11 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Sanosuke Sagara',
                 'picture' => 'sanosuke_sagara.jpg'
+                
+            ),
+             array(
+                'name'    => 'Touya Kinomoto',
+                'picture' => 'touya_kinomoto.jpg'
             ),
             array(
                 'name'    => 'Wakasa',
