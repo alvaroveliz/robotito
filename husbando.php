@@ -22,6 +22,11 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Aomine Daiki',
                 'picture' => 'aomine_daiki.jpg'
+                
+            ),
+             array(
+                'name'    => 'Aquarius Camus',
+                'picture' => 'aquarius_camus.jpg'
             ),
             array(
                 'name'    => 'Hak',
@@ -38,6 +43,11 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Hisoka',
                 'picture' => 'Hisoka.jpg'
+                
+            ),
+            array(
+                'name'    => 'Hiei',
+                'picture' => 'hiei.jpg'
             ),
             array(
                 'name'    => 'Ittoki Otoya',
@@ -50,6 +60,11 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Kurapika',
                 'picture' => 'kurapika.jpg'
+                
+            ),
+            array(
+                'name'    => 'Kogami Shinya',
+                'picture' => 'kogami_shinya.jpg'
             ),
             array(
                 'name'    => 'Makoto Tachinaba',
@@ -69,14 +84,13 @@ function what_is_my_husbando($screen_name)
             ),
             array(
                 'name'    => 'Sanosuke Sagara',
-                'picture' => 'sanosuke_sagara.jpg'
-                
-             ),
-             array(
+                'picture' => 'sanosuke_sagara.jpg'  
+            ),
+            array(
                 'name'    => 'Shinji Ikari',
                 'picture' => 'shinji_ikari.jpg'
                 
-             ),
+            ),
              array(
                 'name'    => 'Spike Spiegel',
                 'picture' => 'spike_spiegel.jpg'
@@ -85,6 +99,11 @@ function what_is_my_husbando($screen_name)
              array(
                 'name'    => 'Touya Kinomoto',
                 'picture' => 'touya_kinomoto.jpg'
+                
+            ),
+             array(
+                'name'    => 'Tooru Oikawa',
+                'picture' => 'tooru_oikawa.jpg'
                 
             ),
              array(
