@@ -70,11 +70,31 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Sanosuke Sagara',
                 'picture' => 'sanosuke_sagara.jpg'
+<<<<<<< Updated upstream
 
+=======
+                
+             ),
+             array(
+                'name'    => 'Shinji Ikari',
+                'picture' => 'shinji_ikari.jpg'
+                
+             ),
+             array(
+                'name'    => 'Spike Spiegel',
+                'picture' => 'spike_spiegel.jpg'
+                   
+                
+>>>>>>> Stashed changes
             ),
              array(
                 'name'    => 'Touya Kinomoto',
                 'picture' => 'touya_kinomoto.jpg'
+                
+            ),
+             array(
+                'name'    => 'Trunks',
+                'picture' => 'trunks.jpg'
             ),
             array(
                 'name'    => 'Wakasa',
