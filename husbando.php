@@ -70,9 +70,6 @@ function what_is_my_husbando($screen_name)
             array(
                 'name'    => 'Sanosuke Sagara',
                 'picture' => 'sanosuke_sagara.jpg'
-<<<<<<< Updated upstream
-
-=======
                 
              ),
              array(
@@ -84,8 +81,6 @@ function what_is_my_husbando($screen_name)
                 'name'    => 'Spike Spiegel',
                 'picture' => 'spike_spiegel.jpg'
                    
-                
->>>>>>> Stashed changes
             ),
              array(
                 'name'    => 'Touya Kinomoto',
