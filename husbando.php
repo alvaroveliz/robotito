@@ -3,16 +3,25 @@
  * Husbando core
  */
 
-function what_is_my_husbando($screen_name)
+function what_is_my_husbando($screen_name, $tweet_id)
 {
     $dbh = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 
     // Detect if this user already have a husbnado for today
-    $sql = "SELECT COUNT(*) as 'count' FROM husbandos WHERE username = '".$screen_name."' AND married_at BETWEEN '".date('Y-m-d')." 00:00:00' AND '".date('Y-m-d')." 23:59:59'";
+    $sql = "
+    SELECT COUNT(*) as 'count' 
+    FROM husbandos 
+    WHERE username = '".$screen_name."' 
+      AND (
+            tweet_id = '".$tweet_id."'
+        OR  married_at BETWEEN '".date('Y-m-d')." 00:00:00' AND '".date('Y-m-d')." 23:59:59'
+      )
+    ";
+
     $result = $dbh->query($sql, PDO::FETCH_ASSOC);
     $rows = $result->fetchAll();
 
-    if ($rows[0]['count'] <= 1) {
+    if ($rows[0]['count'] <= 0) {
 
         $husbandos = array(
             array(
@@ -104,7 +113,7 @@ function what_is_my_husbando($screen_name)
         $husbando = $husbandos[array_rand($husbandos)];
 
         // Registering a husbando for user
-        $insert = "INSERT INTO husbandos (username, husbando, married_at) VALUES ('".$screen_name."', '".$husbando['name']."', '".date('Y-m-d H:i:s')."')";
+        $insert = "INSERT INTO husbandos (username, husbando, married_at, tweet_id) VALUES ('".$screen_name."', '".$husbando['name']."', '".date('Y-m-d H:i:s')."', '".$tweet_id."')";
         $result = $dbh->exec($insert);
 
         return $husbando;

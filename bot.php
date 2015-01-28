@@ -30,7 +30,8 @@ if (array_key_exists('errors', $mentions)) {
 } else {
     while ($m < (count($mentions)-1)) {
         $user_to_reply = $mentions[$m]->user->screen_name;
-        $husbando = what_is_my_husbando($user_to_reply);
+        $tweet_id = $mentions[$m]->id;
+        $husbando = what_is_my_husbando($user_to_reply, $tweet_id);
 
         if ($husbando !== false) {
             // first we upload the photo
