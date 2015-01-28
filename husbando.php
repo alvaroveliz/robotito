@@ -21,7 +21,7 @@ function what_is_my_husbando($screen_name, $tweet_id)
     $result = $dbh->query($sql, PDO::FETCH_ASSOC);
     $rows = $result->fetchAll();
 
-    if ($rows[0]['count'] <= 0) {
+    if ($rows[0]['count'] == 0) {
 
         $husbandos = array(
             array(
@@ -31,6 +31,26 @@ function what_is_my_husbando($screen_name, $tweet_id)
             array(
                 'name'    => 'Aomine Daiki',
                 'picture' => 'aomine_daiki.jpg'
+                
+            ),
+             array(
+                'name'    => 'Aquarius Camus',
+                'picture' => 'aquarius_camus.jpg'
+                
+            ),
+             array(
+                'name'    => 'Dio Brando',
+                'picture' => 'dio_brando.jpg'
+                
+            ),
+             array(
+                'name'    => 'Fuuma Monou',
+                'picture' => 'fuuma_monou.jpg'
+                
+            ),
+             array(
+                'name'    => 'Gaara',
+                'picture' => 'gaara.png'
             ),
             array(
                 'name'    => 'Hak',
@@ -47,6 +67,11 @@ function what_is_my_husbando($screen_name, $tweet_id)
             array(
                 'name'    => 'Hisoka',
                 'picture' => 'Hisoka.jpg'
+                
+            ),
+            array(
+                'name'    => 'Hiei',
+                'picture' => 'hiei.jpg'
             ),
             array(
                 'name'    => 'Ittoki Otoya',
@@ -59,14 +84,24 @@ function what_is_my_husbando($screen_name, $tweet_id)
             array(
                 'name'    => 'Kurapika',
                 'picture' => 'kurapika.jpg'
+                
+            ),
+            array(
+                'name'    => 'Kogami Shinya',
+                'picture' => 'kogami_shinya.jpg'
             ),
             array(
                 'name'    => 'Makoto Tachinaba',
-                'picture' => 'makoto_tachinaba.jpg'
+                'picture' => 'makoto_tachinaba.png'
             ),
             array(
                 'name'    => 'Mamoru Chiba',
                 'picture' => 'mamoru_chiba.png'
+                
+            ),
+            array(
+                'name'    => 'Mitsuyoshi Anzai',
+                'picture' => 'mitsuyoshi_anzai.png'
             ),
             array(
                 'name'    => 'Rukawa Kaede',
@@ -78,14 +113,13 @@ function what_is_my_husbando($screen_name, $tweet_id)
             ),
             array(
                 'name'    => 'Sanosuke Sagara',
-                'picture' => 'sanosuke_sagara.jpg'
-
-             ),
-             array(
+                'picture' => 'sanosuke_sagara.jpg'  
+            ),
+            array(
                 'name'    => 'Shinji Ikari',
                 'picture' => 'shinji_ikari.jpg'
-
-             ),
+                
+            ),
              array(
                 'name'    => 'Spike Spiegel',
                 'picture' => 'spike_spiegel.jpg'
@@ -95,6 +129,11 @@ function what_is_my_husbando($screen_name, $tweet_id)
                 'name'    => 'Touya Kinomoto',
                 'picture' => 'touya_kinomoto.jpg'
 
+            ),
+             array(
+                'name'    => 'Tooru Oikawa',
+                'picture' => 'tooru_oikawa.jpg'
+                
             ),
              array(
                 'name'    => 'Trunks',
